@@ -2,6 +2,7 @@
 
 This project is a dating site application using a modern tech stack: PostgreSQL, Express, React, and Node.js. Docker is used to manage the development environment, with docker-compose orchestrating the services.
 
+```
 .
 ├── backend/
 │   ├── app/
@@ -22,6 +23,7 @@ This project is a dating site application using a modern tech stack: PostgreSQL,
 ├── .env
 ├── docker-compose.yml
 └── Makefile
+```
 
 
 ## Important Files
@@ -38,15 +40,19 @@ This project is a dating site application using a modern tech stack: PostgreSQL,
 Create a .env file at the root of the project with the necessary environment variables. Here is an example of what your .env file should contain:
 
 # PostgreSQL
+```
 POSTGRES_PASSWORD=your_postgres_password
 POSTGRES_USER=your_postgres_user
 POSTGRES_DB=your_postgres_db
+```
 
 # Node.js
+```
 DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_HOST=db
 DB_NAME=your_db_name
+```
 
 ## Make Commands
 
