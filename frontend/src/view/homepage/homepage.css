@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+.title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%; /* Espace entre les boutons */
+}
+
+h1 {
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    margin: 0;
+}
+
+h2 {
+    font-family:'Saira', sans-serif;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 2%;
+}
+
+button{
+    height: 40px;
+    width: 200px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    border-color: antiquewhite;
+    background-color: transparent;
+    color: antiquewhite;
+
+}
+
+.register{
+    background-color: #8F8BAD;
+    border-radius: 10px;
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: antiquewhite;
+}
+
+.login {
+    background-color: #DDD7E9;
+    border-radius: 10px;
+    font-family: 'Saira', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+
+}
