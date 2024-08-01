@@ -4,7 +4,7 @@ import './notfound.css';
 // test
 export default function NotFound() {
     return (
-        <div>
+        <div className="night nofound">
             <h1>Oops! You seem to be lost. </h1>
         </div>
         )

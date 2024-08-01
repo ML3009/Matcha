@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+.register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.first {
+    margin-top: 5%;
+}
+
+form {
+    width: 80%;
+    max-width: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    border: 1px inset #DDD7E9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: 'Saira', sans-serif;
+    font-weight: 200;
+    font-size: 1em;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    color: #DDD7E9;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px inset #DDD7E9;
+    border-radius: 5px;
+    background-color: #1E1E1E;
+    color: #DDD7E9;
+    margin-bottom: 2.5%;
+    box-sizing: border-box;
+}
+
+button {
+    height: 40px;
+    width: 100%;
+    max-width: 200px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    background-color: #8F8BAD;
+    color: antiquewhite;
+    font-family: 'Saira', sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        /* Augmente la largeur pour les petits écrans */
+    }
+
+    input,
+    button {
+        width: 100%;
+        /* Utilise toute la largeur disponible pour les petits écrans */
+    }
+}
+
+/* Media query pour les très petits écrans */
+@media (max-width: 400px) {
+    form {
+        width: 100%;
+        /* Utilise toute la largeur disponible pour les très petits écrans */
+    }
+
+    input,
+    button {
+        width: 100%;
+        /* Utilise toute la largeur disponible pour les très petits écrans */
+    }
+}

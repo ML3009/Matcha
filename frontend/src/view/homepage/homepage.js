@@ -1,10 +1,9 @@
 import React from 'react';
 import './homepage.css';
-import { RegisterButton, LoginButton} from '../../component/button/login_register';
+import { RegisterButton, LoginButton} from '../../component/button/hp_login_register';
 
 
 function Homepage() {
-    console.log('Homepage');
     return(
         <div className="night">
             <div className="title">

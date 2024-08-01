@@ -3,7 +3,8 @@ import './login.css';
 
 function Login() {
     return(
-        <div>
+        <div className="night login">
+
             <h1>Login</h1>
         </div>
     )
