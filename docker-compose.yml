@@ -1,4 +1,3 @@
-version: '3.8'
 services:
     db:
         build: ./backend/db
@@ -21,3 +20,11 @@ services:
             DB_PASSWORD: ${DB_PASSWORD}
             DB_HOST: ${DB_HOST}
             DB_NAME: ${DB_NAME}
+    frontend:
+        build: ./frontend
+        ports:
+            - "4000:4000"
+        volumes:
+            - ./frontend:/app
+        stdin_open: true
+        tty: true

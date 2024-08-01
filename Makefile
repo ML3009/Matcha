@@ -37,3 +37,5 @@ clean: down
 	docker volume prune -f
 	@echo "Cleaning up unused Docker resources..."
 	docker system prune -f
+
+re : clean build up
