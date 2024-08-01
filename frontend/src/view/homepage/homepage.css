@@ -29,21 +29,21 @@ h2 {
     margin-bottom: 2%;
 }
 
-button{
+button {
     height: 40px;
     width: 200px;
     border: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
-button:hover{
+button:hover {
     border-color: antiquewhite;
     background-color: transparent;
     color: antiquewhite;
 
 }
 
-.register{
+.register {
     background-color: #8F8BAD;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;

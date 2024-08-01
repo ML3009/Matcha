@@ -1,6 +1,6 @@
 import React from 'react';
 import './homepage.css';
-import { handleLoginClick, handleRegisterClick} from './bouton_event';
+import { RegisterButton, LoginButton} from '../../component/button/login_register';
 
 
 function Homepage() {
@@ -12,8 +12,8 @@ function Homepage() {
                 <h2>Ready to meet you flowermate ?</h2>
             </div>
             <div className='button-container'>
-                <button className='register' onClick={handleRegisterClick}>Register</button>
-                <button className='login' onClick={handleLoginClick}>Log in</button>
+                <RegisterButton />
+                <LoginButton />
             </div>
         </div>
     )
