@@ -1,0 +1,20 @@
+PostgreSQL Docker Setup
+
+
+
+Files Overview
+
+Dockerfile: Defines the Docker image and the steps to set up the PostgreSQL database.
+
+create_db_script: Bash script to create the database using environment variables.
+  Replace the text <DB_NAME> <DB_USER> with value set in the env by dotenv.
+
+create_db_template.sql: SQL template for creating the database.
+
+create_role_script: Bash script to create the database role using environment variables.
+  Replace the text <DB_USER> <DB_PASSWORD> with value set in the env by dotenv.
+
+create_role_template.sql: SQL template for creating the database role.
+
+
+table_create/users.sql: SQL script for creating the users table. 
