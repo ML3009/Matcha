@@ -3,12 +3,16 @@ FROM postgres:latest
 
 # Copy init scripts to container
 # These scripts can be SQL files or shell scripts for initial configuration
-COPY ./init-db.sql /docker-entrypoint-initdb.d/
+COPY database_creation/ .
 
-# Set environment variables (you can override or add them here if needed)
-ENV POSTGRES_DB=api
-ENV POSTGRES_USER=me
-ENV POSTGRES_PASSWORD=password
+RUN chmod +x create_db_script.sh create_role_script.sh
+RUN ./create_role_script.sh
+RUN ./create_db_script.sh
+RUN rm create_db_script.sh create_role_script.sh .env create_db_template.sql create_role_template.sql
+
+COPY table_creation/ /docker-entrypoint-initdb.d/
+
 
 # Expose port 5432 for connection
 EXPOSE 5432
+
