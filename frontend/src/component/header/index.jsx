@@ -13,15 +13,9 @@ const NavContainer = styled.nav`
     align-items: center;
     position: fixed;
     top: 0;
-    rigth: 0;
+    right: 100;
     height: 100%;
-    background-image: radial-gradient(ellipse at top, transparent 0%, 
-                var(--dark-color)), radial-gradient(ellipse at bottom, 
-                var(--dark-color), rgba(145, 233, 255, 0.2)), 
-                repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px), 
-                repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px), 
-                repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px), 
-                linear-gradient(90deg, #00fffa, #f0f0f0);
+    background-color: #2D283E;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 
 `;

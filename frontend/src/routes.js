@@ -22,7 +22,7 @@ function Roads() {
     <Router>
       <AppWrapper>
       <GlobalStyle />
-      <HeaderWithConditionalRendering />
+      <Header />
       <MainContent>
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -38,12 +38,12 @@ function Roads() {
   );
 }
 
-function HeaderWithConditionalRendering() {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
-  const isLogin = location.pathname === '/login';
-  const isRegister = location.pathname === '/register';
-  return !isLogin && !isRegister && !isHomePage && <Header />;
-}
+// function HeaderWithConditionalRendering() {
+//   const location = useLocation();
+//   const isHomePage = location.pathname === '/';
+//   const isLogin = location.pathname === '/login';
+//   const isRegister = location.pathname === '/register';
+//   return !isLogin && !isRegister && !isHomePage && <Header />;
+// }
 
 export default Roads;

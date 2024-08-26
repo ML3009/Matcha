@@ -10,7 +10,7 @@ const FooterContainer = styled.footer`
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     width: 100%;
-    background-color: black;
+    background-color: #2D283E;
 
     div {
         margin: 0 50px;
