@@ -1,34 +1,45 @@
 import React from "react";
-import RegisterFormButton from "../button/registerForm_validation";
+import { useForm } from "react-hook-form"
+import { ErrorMessage } from "@hookform/error-message"
+var CryptoJS = require("crypto-js");
+
+
+// put in env file
+const secretKey = "the passphrase is not secure yet";
+
+        // Decrypt
+        // var bytes  = CryptoJS.AES.decrypt(password1, secretKey);
+        // var originalText = bytes.toString(CryptoJS.enc.Utf8);
 
 const RegisterForm = () => {
-    const [formData, setFormData] = React.useState({
-        username: "",
-        first_name: "",
-        last_name: "",
-        email: "",
-        password: "",
-        confirm_password: "",
-    });
+    const { register, handleSubmit, formState: { errors }, getValues} = useForm();
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value,
-        });
-    }
+    const onSubmit = (data) => {
+        console.log(data);
+        var password1 = CryptoJS.AES.encrypt(data.password, secretKey).toString();
+    };
 
     return (
         <div className="register_form">
-            <form>
+
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <label className="first">
                     <h3>Username</h3>
                     <input 
                         type="text" 
                         name="username" 
                         placeholder="Username"
-                        value={formData.username}
-                        onChange={handleChange}
+                        {...register("username", { 
+                                required: "Username field is required.",
+                                maxLength: {
+                                    value: 20,
+                                    message: "Username needs to be less than 20 characters long."
+                                },
+                                minLength: {
+                                    value: 3,
+                                    message: "Username needs to be at least 3 characters long."
+                                }
+                            })}
                     />
                 </label>
                 <label>
@@ -37,8 +48,17 @@ const RegisterForm = () => {
                         type="text" 
                         name="first_name" 
                         placeholder="First Name" 
-                        value={formData.first_name}
-                        onChange={handleChange}
+                        {...register("first_name", { 
+                                required: 'First Name field is required.',
+                                maxLength: {
+                                    value: 20,
+                                    message: "First Name needs to be less than 20 characters long."
+                                },
+                                minLength: {
+                                    value: 2,
+                                    message: "First Name needs to be at least 3 characters long."
+                                }
+                        })}
                     />
                 </label>
                 <label>
@@ -47,8 +67,17 @@ const RegisterForm = () => {
                         type="text" 
                         name="last_name" 
                         placeholder="Last Name" 
-                        value={formData.last_name}
-                        onChange={handleChange}
+                        {...register("last_name", {
+                                required: 'Last Name field is required',
+                                maxLength: {
+                                    value: 20,
+                                    message: "Last Name needs to be less than 20 characters long."
+                                },
+                                minLength: {
+                                    value: 2,
+                                    message: "Last Name needs to be at least 2 characters long."
+                                }
+                        })}
                     />
                 </label>
                 <label>
@@ -57,8 +86,13 @@ const RegisterForm = () => {
                         type="email"
                         name="email" 
                         placeholder="Email" 
-                        value={formData.email}
-                        onChange={handleChange}
+                        {...register("email", { 
+                                required: 'Email field is required.',
+                                pattern: {
+                                    value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+                                    message: "Email format is not valid."
+                                }
+                        })}
                     />
                 </label>
                 <label>
@@ -67,8 +101,21 @@ const RegisterForm = () => {
                         type="password" 
                         name="password" 
                         placeholder="Password" 
-                        value={formData.password}
-                        onChange={handleChange}
+                        {...register("password", {
+                            required: 'Password field is requiered',
+                            maxLength: {
+                                value: 20,
+                                message: "Password needs to be less than 20 characters long."
+                            },
+                            minLength: {
+                                value: 6,
+                                message: "Password needs to be at least 6 characters long."
+                            },
+                            pattern: {
+                                value: /^(?=.*\d).{6,20}$/,
+                                message: "Password must contain at least one number."
+                            }
+                        })}
                     />
                 </label>
                 <label>
@@ -77,12 +124,19 @@ const RegisterForm = () => {
                         type="password" 
                         name="confirm_password" 
                         placeholder="Confirm Password" 
-                        value={formData.confirm_password}
-                        onChange={handleChange}
+                        {...register("confirm_password", { required: 'Confirm Password field is required.',
+                            validate: value => value === getValues("password") || "The passwords do not match."
+                        })}
                     />
                 </label>
-                <RegisterFormButton data={formData}/>
+                <button type="submit">Register</button>
             </form>
+            <div className={`error-messages ${Object.keys(errors).length > 0 ? 'has-errors' : ''}`}>
+                {(Object.keys(errors).length > 0) && <h3>Errors:</h3>}
+                {Object.keys(errors).map((field) => (
+                    <ErrorMessage key={field} errors={errors} name={field} render={({ message }) => <p>ⓘ    {message}</p>} />
+                ))}
+            </div>
         </div>
     );
 };

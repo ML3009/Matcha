@@ -2,7 +2,7 @@
 
 .register_form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -12,6 +12,20 @@
 
 .first {
     margin-top: 5%;
+}
+
+.error-messages.has-errors {
+    display: flex;
+    flex-direction: column;
+    color: lightcoral;
+    font-size: 0.8em;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left: 15%;
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    border: 1px inset #DDD7E9;
+    padding: 20px;
 }
 
 form {
