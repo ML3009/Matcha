@@ -1,30 +1,92 @@
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import FlowerLogo from '../../assets/flowerLogo.png'
+import FlowerLogo from '../../assets/flowerLogo.png';
+import RingBell from '../../assets/ringBell.png';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const HomeLogo = styled.img `
+
+const RingBellNotif = styled.img `
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+     @media screen and (max-width: 768px) {
+        height: 50px;
+        top: 5px;
+        right: 5px;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 40px;
+        top: 2px;
+        right: 2px;
+    }
+
+`;
+
+const NavBar = styled.nav`
+
+    position: relative;
+    display: flex;
+
+     @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+`;
+
+const HomeLogoBurger = styled.img `
     height: 70px;
+    margin: 30px;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5em;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 20px auto; 
+      
+    }
 `;
 
-const NavContainer = styled.nav`
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
+const NavBarList = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    position: fixed;
-    top: 0;
-    right: 100;
-    height: 100%;
-    background-color: #2D283E;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    
+    &.show {
+        display: flex;
+        }
+
+     @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        background-color:  #2D283E;
+        z-index: 1;
+        display: none;
+
+        &.show {
+        display: flex;
+        }
+    }
 
 `;
 
-const NavLinks = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 120px; 
-    margin-top: 140px;
+const NavBarItem = styled.li`
+    position: relative;
+    padding: 1rem;
+
+    &:hover {
+        display: flex;
+        flex-direction: column;
+        }
+
 `;
 
 const ColorLinks = styled(Link)`
@@ -58,20 +120,43 @@ const ColorButtonLogout = styled.button`
 `;
 
 
-
 function Header() {
+
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
+    const isLogin = location.pathname === '/login';
+    const isRegister = location.pathname === '/register';
+    const disableMenu = isLogin || isRegister || isHomePage;
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => {
+        if (!disableMenu) {
+            setIsMenuOpen(!isMenuOpen);
+        }
+    };
+
     return (
-        <NavContainer>
-            <Link to="/">
-                <HomeLogo src={FlowerLogo} />
-            </Link>
-            <NavLinks>
-                <ColorLinks to="/wilderness">Wilderness</ColorLinks>
-                <ColorLinks to="/mygarden">My Garden</ColorLinks>
-                <ColorLinks to="/profile">Profile</ColorLinks>
-                <ColorButtonLogout>Logout</ColorButtonLogout>
-            </NavLinks>
-        </NavContainer>
+        <NavBar>
+            <HomeLogoBurger onClick={toggleMenu} src={FlowerLogo} />
+            <NavBarList  className={`${isMenuOpen ? 'show' : ''}`}>
+                <NavBarItem>
+                    <ColorLinks to="/wilderness">Wilderness</ColorLinks>
+                </NavBarItem>
+
+                <NavBarItem>
+                    <ColorLinks to="/mygarden">My Garden</ColorLinks>
+                </NavBarItem>
+
+                <NavBarItem>
+                    <ColorLinks to="/profile">Profile</ColorLinks>
+                </NavBarItem>
+
+                <NavBarItem>
+                    <ColorButtonLogout>Logout</ColorButtonLogout>
+                </NavBarItem>
+            </NavBarList>
+            <RingBellNotif src={RingBell} />
+        </NavBar>
     )
 }
 

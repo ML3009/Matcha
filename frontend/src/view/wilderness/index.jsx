@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import picture from '../../assets/satxie.jpg';
+import Card from '../../component/wildcard';
+import Interact from '../../component/wildinteract';
 
 const ProfileWrapper = styled.div`
   display: flex;
@@ -11,17 +12,13 @@ const ProfileWrapper = styled.div`
 
 `;
 
-const Picture = styled.img`
-    height: 150px;
-    width: 150px;
-    border-radius: 75px;
-`;
 
 
 function Wilderness(){
     return (
             <ProfileWrapper>
-                <Picture src={picture} />
+                <Card />
+                <Interact />
             </ProfileWrapper>
 
     )

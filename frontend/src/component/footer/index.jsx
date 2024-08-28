@@ -6,14 +6,12 @@ const FooterContainer = styled.footer`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px 0; /* Ajustez le padding selon vos besoins */
+    padding: 90px 0;
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
-    width: 100%;
-    background-color: #2D283E;
 
     div {
-        margin: 0 50px;
+        margin: 0 100px;
     }
 `;
 

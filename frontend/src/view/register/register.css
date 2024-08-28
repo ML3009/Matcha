@@ -54,21 +54,7 @@ input {
     box-sizing: border-box;
 }
 
-button {
-    height: 40px;
-    width: 100%;
-    max-width: 200px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    background-color: #8F8BAD;
-    color: antiquewhite;
-    font-family: 'Saira', sans-serif;
-    font-weight: 400;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+
 
 /* Media query pour les petits écrans */
 @media (max-width: 600px) {

@@ -1,43 +1,44 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
     body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
+        background-color: #2D283E;
+        font-family: 'Saira', sans-serif;
+       
+        h2 {
+            color: #DDD7E9;
+        }
+    
+        h1 {
+            color: #8F8BAD;
+        }
+
+        
+        margin: 0;
+
+        button {
+            height: 40px;
+            width: 100%;
+            max-width: 200px;
+            margin-top: 5%;
+            margin-bottom: 10%;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+            background-color: #8F8BAD;
+            color: antiquewhite;
+            font-family: 'Saira', sans-serif;
+            font-weight: 400;
+        } 
     }
 
-    main {
-        flex: 1;
-    }
+  
 
-    code {
-        font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-    }
+
 `;
 
-const MainContent = styled.main`
-    flex: 1;
-    position: relative;
-    left: 10%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2D283E;
-   
-
-    h2 {
-        color: #DDD7E9;
-    }
-
-    h1 {
-        color: #8F8BAD;
-    }
-`;
-
-export { GlobalStyle, MainContent };
+export { GlobalStyle };
