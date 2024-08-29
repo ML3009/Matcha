@@ -16,29 +16,40 @@ const GlobalStyle = createGlobalStyle`
             color: #8F8BAD;
         }
 
-        
         margin: 0;
 
         button {
-            height: 40px;
-            width: 100%;
-            max-width: 200px;
-            margin-top: 5%;
-            margin-bottom: 10%;
+            
             border: 2px solid transparent;
             border-radius: 5px;
-            box-sizing: border-box;
             transition: all 0.3s ease;
             background-color: #8F8BAD;
             color: antiquewhite;
-            font-family: 'Saira', sans-serif;
-            font-weight: 400;
+            font-family: 'Saira', sans-serif;  
         } 
+
+        button:hover {
+            border-color: antiquewhite;
+            background-color: transparent;
+            color: antiquewhite;
+    
+        }  
+
+        a {
+            border: 2px solid transparent;
+            background-color: #8F8BAD;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            color: antiquewhite;
+            text-decoration: none;
+            font-family: 'Saira', sans-serif;  
+        }
+        a:hover,
+        a:focus {
+            color: #333;
+            background-color: #fff;
+        }
     }
-
-  
-
-
 `;
 
 export { GlobalStyle };

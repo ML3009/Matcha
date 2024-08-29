@@ -3,13 +3,12 @@ import Card from '../../component/wildcard';
 import Interact from '../../component/wildinteract';
 
 const ProfileWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-rows: repeat(2, 0.4fr);
   justify-content: center;
   align-items: center;
-  padding: 90px 0;
-  margin: 0 10px;
-
+  gap: 4em;
+  
 `;
 
 

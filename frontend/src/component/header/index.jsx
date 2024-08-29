@@ -12,7 +12,7 @@ const RingBellNotif = styled.img `
     position: absolute;
     top: 30px;
     right: 10px;
-     @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
         height: 50px;
         top: 5px;
         right: 5px;
@@ -91,13 +91,8 @@ const NavBarItem = styled.li`
 
 const ColorLinks = styled(Link)`
 
-    background-color: #8F8BAD;
-    border-radius: 5px;
-    font-family: 'Comic', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
-    color: antiquewhite;
-    text-decoration: none;
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
@@ -106,10 +101,11 @@ const ColorLinks = styled(Link)`
 `;
 
 const ColorButtonLogout = styled.button`
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     background-color: #DDD7E9;
-    border-radius: 10px;
-    font-family: 'Comic', sans-serif;
-    font-weight: 500;
     font-size: 15px;
     color: #1E1E1E;
     padding: 10px 20px;
@@ -155,7 +151,9 @@ function Header() {
                     <ColorButtonLogout>Logout</ColorButtonLogout>
                 </NavBarItem>
             </NavBarList>
-            <RingBellNotif src={RingBell} />
+            {!disableMenu ? (
+                <RingBellNotif src={RingBell} />
+            ) : null}
         </NavBar>
     )
 }

@@ -15,7 +15,9 @@
     justify-content: center;
     gap: 3%; /* Espace entre les boutons */
     position: relative;
+   
 }
+
 
 
 
@@ -35,28 +37,33 @@ h2 {
 
 
 
-button:hover {
-    border-color: antiquewhite;
-    background-color: transparent;
-    color: antiquewhite;
-
-}
-
 .register {
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     background-color: #8F8BAD;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
+    width: 100%;
+    max-width: 200px;
     color: antiquewhite;
 }
 
 .login {
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     background-color: #DDD7E9;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
+    width: 100%;
+    max-width: 200px;
     color: #1E1E1E;
 
 }
