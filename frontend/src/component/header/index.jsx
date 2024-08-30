@@ -155,9 +155,7 @@ function Header() {
                     <ColorButtonLogout>Logout</ColorButtonLogout>
                 </NavBarItem>
             </NavBarList>
-            {!disableMenu ? (
-                <RingBellNotif src={RingBell} />
-            ) : null}
+            {!disableMenu && <RingBellNotif src={RingBell} />}
         </NavBar>
     )
 }

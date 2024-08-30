@@ -13,58 +13,58 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Saira', sans-serif;
     }
        
-        h2 {
-            color: #DDD7E9;
-        }
-    
-        h1 {
-            color: #8F8BAD;
-        }
+    h2 {
+        color: #DDD7E9;
+    }
 
-        button {
-            
-            border: 2px solid transparent;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            background-color: #8F8BAD;
-            color: antiquewhite;
-            font-family: 'Saira', sans-serif;  
-            width: 10em;
-        } 
+    h1 {
+        color: #8F8BAD;
+    }
 
-        button:hover {
-            border-color: antiquewhite;
-            background-color: transparent;
-            color: antiquewhite;
-        }  
+    button {
+        
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        background-color: #8F8BAD;
+        color: antiquewhite;
+        font-family: 'Saira', sans-serif;  
+        width: 10em;
+    } 
 
-        a {
-            background-color: #8F8BAD;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            color: antiquewhite;
-            text-decoration: none;
-            font-family: 'Saira', sans-serif;  
-            width: 10em;
-        }
-        a:hover,
-        a:focus {
-            background-color: transparent;
-            border-color: antiquewhite;
-            color: antiquewhite;
-        }
+    button:hover {
+        border-color: antiquewhite;
+        background-color: transparent;
+        color: antiquewhite;
+    }  
 
-        header {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            align-items: center;
-        }
+    a {
+        background-color: #8F8BAD;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        color: antiquewhite;
+        text-decoration: none;
+        font-family: 'Saira', sans-serif;  
+        width: 10em;
+    }
+    a:hover,
+    a:focus {
+        background-color: transparent;
+        border-color: antiquewhite;
+        color: antiquewhite;
+    }
 
-        footer {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            align-items: center;
-        }
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
 
 `;
 
