@@ -3,17 +3,19 @@ import Picture from '../../assets/satxie.jpg';
 
 
 const CardContainer = styled.div`
+    display: grid;
     grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    place-self: center;
+    gap: 0.6em;
     width: 90%;
     max-width: 20em;
-    padding: 1em 2em;
+    padding: 0 1em;
+    margin: 3em auto;
     background-color: #8F8BAD;
     box-shadow: 0em 1em 1em #999;
     border-radius: 10px;
     border: solid;
-    div {
-        margin: 1em auto;
-    }
 
      @media screen and (max-width: 768px) {
         width: 95%;
@@ -28,7 +30,6 @@ const CardContainer = styled.div`
 `;
 
 const ProfilePicture = styled.img`
-    display: grid;
     width: 90%;
     margin: auto;
     border-radius: 1em;
@@ -48,11 +49,12 @@ const AgeName = styled.div`
     border: solid;
     display: flex;
     align-items: center;
+    margin: 1em auto;
 `;
 
 const HumorContainer = styled.div`
-      display: inline-block; 
-      margin-right: 1em;
+    margin-left: 1em;
+    margin-right: 6em;
 `;
 
 const NameContainer = styled.div`
@@ -66,16 +68,18 @@ const DescriptionContainer = styled.div`
     background-color: #DDD7E9;
     text-align: center;
     width: 100%;
-    padding: 1em 1em;
+    padding: 0.4em 0.8em;
     box-sizing: border-box;
     border-radius: 1em;
     border: solid;
+    margin: 0.4em auto;
 `;
 
 const TagContainer = styled.div`
     color: #DDD7E9;
     text-align: center;
     box-sizing: border-box;
+    margin: 1em auto;
 `;
 
 

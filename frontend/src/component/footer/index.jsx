@@ -2,19 +2,10 @@ import { styled } from 'styled-components';
 
 
 const FooterContainer = styled.footer`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%; height: 50px;
-    bottom: 0; left: 0; right: 0;
+    
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
-
-    div {
-        margin: 0 100px;
-    }
+    margin-top: -6em;
 
     @media screen and (max-width: 768px) {
         position: relative;
@@ -25,12 +16,25 @@ const FooterContainer = styled.footer`
     }
 `;
 
+const RightFooter = styled.div`
+    place-self: center;
+`;
+
+const CenterFooter = styled.div`
+    place-self: center;
+`;
+
+const LeftFooter = styled.div`
+    place-self: center;
+`;
+
+
 function Footer() {
     return (
         <FooterContainer>
-            <div>© 2024 Plant your date</div>
-            <div>Terms & Conditions</div>
-            <div>Privacy Policy</div>
+            <RightFooter>© 2024 Plant your date</RightFooter>
+            <CenterFooter>Terms & Conditions</CenterFooter>
+            <LeftFooter>Privacy Policy</LeftFooter>
         </FooterContainer>
     )
 }

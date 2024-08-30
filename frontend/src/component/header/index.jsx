@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
+// need to fix RingBellNotif with grid 
 const RingBellNotif = styled.img `
     height: 60px;
     cursor: pointer;
@@ -27,13 +28,17 @@ const RingBellNotif = styled.img `
 `;
 
 const NavBar = styled.nav`
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;    
 
-    position: relative;
-    display: flex;
 
      @media screen and (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        align-items: center;
+        justify-items: center;
+        
     }
 `;
 
@@ -41,7 +46,6 @@ const HomeLogoBurger = styled.img `
     height: 70px;
     margin: 30px;
     cursor: pointer;
-    display: flex;
     font-size: 1.5em;
 
     @media screen and (max-width: 768px) {
@@ -56,63 +60,69 @@ const NavBarList = styled.ul`
     padding: 0;
     margin: 0;
     display: none;
-    flex-wrap: wrap;
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
     justify-content: space-around;
     align-items: center;
     
     &.show {
-        display: flex;
+        display: grid;
         }
 
      @media screen and (max-width: 768px) {
-        flex-direction: column;
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         width: 100%;
         background-color:  #2D283E;
         z-index: 1;
         display: none;
+        justify-content: space-around;
+        align-items: center;
 
         &.show {
-        display: flex;
+        display: grid;
+        justify-content: center;
+        align-items: center;
         }
     }
 
 `;
 
 const NavBarItem = styled.li`
-    position: relative;
     padding: 1rem;
-
+    place-self: center;
+    width: 12em;
+    text-align: center;
     &:hover {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        place-self: center;
         }
-
+    @media screen and (max-width: 768px) {
+        place-self: center;
+        
+    }
 `;
 
 const ColorLinks = styled(Link)`
-
-    font-weight: 400;
     font-size: 15px;
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+    padding: 0.2em 2em;
+     @media screen and (max-width: 768px) {
+         display: block;
+    }
 `;
 
 const ColorButtonLogout = styled.button`
-    height: 40px;
-    margin-top: 5%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
     background-color: #DDD7E9;
     font-size: 15px;
     color: #1E1E1E;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
+   @media screen and (max-width: 768px) {
+         display: block;
+    }
+  
+  
 `;
 
 
