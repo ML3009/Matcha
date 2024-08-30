@@ -6,26 +6,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-// need to fix RingBellNotif with grid 
-const RingBellNotif = styled.img `
-    height: 60px;
-    cursor: pointer;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    @media screen and (max-width: 768px) {
-        height: 50px;
-        top: 5px;
-        right: 5px;
-    }
-
-    @media screen and (max-width: 480px) {
-        height: 40px;
-        top: 2px;
-        right: 2px;
-    }
-
-`;
 
 const NavBar = styled.nav`
     display: grid;
@@ -33,18 +13,33 @@ const NavBar = styled.nav`
     align-items: center;    
 
 
-     @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         align-items: center;
         justify-items: center;
-        
     }
 `;
+    
+const RingBellNotif = styled.img `
+    height: 2em;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    justify-self: end;
+    align-self: start;
+    right: 1em;
+    top: 2em;
+     @media screen and (max-width: 768px) {
+      display: block;
+      margin: 20px auto; 
+      
+    }
 
-const HomeLogoBurger = styled.img `
-    height: 70px;
-    margin: 30px;
+`;
+    const HomeLogoBurger = styled.img `
+    height: 2.9em;
+    margin: 1em;
     cursor: pointer;
     font-size: 1.5em;
 

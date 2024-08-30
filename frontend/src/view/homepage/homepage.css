@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+.main-content-homepage {
+    margin-bottom: 30em;
+}
+
 .title{
     text-align: center;
     display: flex;

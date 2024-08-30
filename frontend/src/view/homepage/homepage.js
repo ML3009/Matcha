@@ -5,7 +5,7 @@ import { RegisterButton, LoginButton} from '../../component/button/hp_login_regi
 
 function Homepage() {
     return(
-        <div >
+        <div className="main-content-homepage">
             <div className="title">
                 <h1>Plant you date</h1>
                 <h2>Ready to meet your flowermate ?</h2>

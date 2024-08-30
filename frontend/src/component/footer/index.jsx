@@ -5,7 +5,6 @@ const FooterContainer = styled.footer`
     
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
-    margin-top: -6em;
 
     @media screen and (max-width: 768px) {
         position: relative;
