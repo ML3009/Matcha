@@ -13,8 +13,6 @@ const ProfileWrapper = styled.div`
   
 `;
 
-
-
 function Wilderness(){
     return (
             <ProfileWrapper>

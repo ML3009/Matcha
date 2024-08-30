@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import like from '../../assets/Like.png';
 
-const LikeContainer = styled.button`   
+const LikeButton = styled.button`   
     grid-row: 1 / 2;
     grid-column: 1/2;
     background: none;
@@ -16,11 +16,15 @@ const LikeImg = styled.img `
 `;
 
 function Like() {
+
+    const handleLike = () => {
+        alert('You liked this person!');
+    }
     return (
     
-        <LikeContainer>
+        <LikeButton onClick={handleLike}>
             <LikeImg src={ like } />
-        </LikeContainer>
+        </LikeButton>
           
     )
 }

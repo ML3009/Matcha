@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import dislike from '../../assets/Dislike.png'; 
 
-const DislikeContainer = styled.button`
+const DislikeButton = styled.button`
     grid-row: 1;
     grid-column: 3/4;
-
     background: none;
     place-self: center;
 `;
@@ -16,10 +15,13 @@ const DislikeImg = styled.img`
 `;
 
 function Dislike() {
+    const handleDislike = () => {
+        alert('You disliked this person!');
+    }
     return (
-        <DislikeContainer>
+        <DislikeButton onClick={handleDislike}>
             <DislikeImg src={dislike} />
-        </DislikeContainer>
+        </DislikeButton>
     )
 }
 

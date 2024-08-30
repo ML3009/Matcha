@@ -7,6 +7,8 @@ import Login from './view/login/login';
 import Header from './component/header';
 import Footer from './component/footer';
 import Wilderness from './view/wilderness';
+import MyGarden from './view/mygarden';
+import Profile from './view/profile';
 import { GlobalStyle } from './utils/style/GlobalStyle';
 
 
@@ -24,6 +26,8 @@ function Roads() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/wilderness" element={<Wilderness />} />
+        <Route path="/mygarden" element={<MyGarden />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

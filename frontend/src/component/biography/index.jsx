@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import biography from '../../assets/info.png';
 
-const BiographyContainer= styled(Link) `
+const BiographyLink= styled(Link) `
     grid-row: 2/2;
     grid-column: 2/3;
     place-self: center;
@@ -26,11 +26,15 @@ const BiographyText = styled.div`
     margin-left: 4em`;
 
 function Biography() {
+    const handleBiography = () => {
+        alert ('You want to see his biography, right?');
+    }
+    
     return (
-        <BiographyContainer>
+        <BiographyLink onClick={handleBiography}>
             <BiographyImg src={biography}/>
             <BiographyText>Biography</BiographyText>
-        </BiographyContainer>
+        </BiographyLink>
     )
 }
 

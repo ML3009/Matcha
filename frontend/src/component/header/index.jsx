@@ -45,8 +45,7 @@ const RingBellNotif = styled.img `
 
     @media screen and (max-width: 768px) {
       display: block;
-      margin: 20px auto; 
-      
+      margin: 20px auto;     
     }
 `;
 
