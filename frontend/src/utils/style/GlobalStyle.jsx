@@ -3,14 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
     body {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer";
         background-color: #2D283E;
         font-family: 'Saira', sans-serif;
+
     }
        
     h2 {
@@ -55,16 +50,20 @@ const GlobalStyle = createGlobalStyle`
     }
 
     header {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 1em;
     }
 
     footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+
     }
+
+    
 
 `;
 

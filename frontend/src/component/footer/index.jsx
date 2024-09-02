@@ -2,7 +2,10 @@ import { styled } from 'styled-components';
 
 
 const FooterContainer = styled.footer`
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20em;
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
 
@@ -15,25 +18,14 @@ const FooterContainer = styled.footer`
     }
 `;
 
-const RightFooter = styled.div`
-    place-self: center;
-`;
-
-const CenterFooter = styled.div`
-    place-self: center;
-`;
-
-const LeftFooter = styled.div`
-    place-self: center;
-`;
 
 
 function Footer() {
     return (
         <FooterContainer>
-            <RightFooter>© 2024 Plant your date</RightFooter>
-            <CenterFooter>Terms & Conditions</CenterFooter>
-            <LeftFooter>Privacy Policy</LeftFooter>
+            <div>© 2024 Plant your date</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy Policy</div>
         </FooterContainer>
     )
 }
