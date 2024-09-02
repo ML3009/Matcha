@@ -15,8 +15,8 @@ app.use(
 );
 
 // USER MANAGMENT
-// const UserRouter = require('../src/UserManagment/urls');
-// app.use('/api/users', UserRouter )
+const UserRouter = require('./UserManagment/urls');
+app.use('/api/users', UserRouter )
 
 
 
@@ -34,3 +34,5 @@ app.delete('/users/:id', db.deleteUser);
 app.listen(port, () => {
     console.log(`App running on port ${port}.`);
 });
+
+

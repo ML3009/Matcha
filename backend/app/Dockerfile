@@ -4,10 +4,11 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
+RUN npm install -g nodemon
 RUN npm install
 
 COPY src/ ./src
 
 EXPOSE 3000
 
-CMD ["node", "src/server.js"]
+CMD ["nodemon", "src/server.js"]
