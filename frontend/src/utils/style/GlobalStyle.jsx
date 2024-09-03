@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Saira', sans-serif;
 
     }
-       
     h2 {
         color: #DDD7E9;
     }
