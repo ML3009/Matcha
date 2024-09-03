@@ -10,8 +10,9 @@ COPY package.json ./
 # Installer les dépendances
 RUN npm install
 
-# Copier le reste des fichiers de l'application
 COPY . .
+
+RUN npm install
 # Construire l'application React
 RUN npm run build
 

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+.main-content-register{
+    margin-bottom: 5em;
+}
 .register_form {
     display: flex;
     flex-direction: row;
@@ -68,21 +72,7 @@ input {
     box-sizing: border-box;
 }
 
-button {
-    height: 40px;
-    width: 100%;
-    max-width: 200px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    background-color: #8F8BAD;
-    color: antiquewhite;
-    font-family: 'Saira', sans-serif;
-    font-weight: 400;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
+
 
 /* Media query pour les petits écrans */
 @media (max-width: 600px) {
@@ -91,11 +81,6 @@ button {
         /* Augmente la largeur pour les petits écrans */
     }
 
-    input,
-    button {
-        width: 100%;
-        /* Utilise toute la largeur disponible pour les petits écrans */
-    }
 }
 
 /* Media query pour les très petits écrans */
@@ -105,9 +90,4 @@ button {
         /* Utilise toute la largeur disponible pour les très petits écrans */
     }
 
-    input,
-    button {
-        width: 100%;
-        /* Utilise toute la largeur disponible pour les très petits écrans */
-    }
 }

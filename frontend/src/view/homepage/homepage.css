@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+.main-content-homepage {
+    margin-bottom: 30em;
+}
+
 .title{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .button-container {
@@ -13,7 +20,11 @@
     flex-direction: row;
     justify-content: center;
     gap: 3%; /* Espace entre les boutons */
+    position: relative;
+   
 }
+
+
 
 
 h1 {
@@ -30,35 +41,35 @@ h2 {
     margin-bottom: 2%;
 }
 
-button {
-    height: 40px;
-    width: 200px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
 
-button:hover {
-    border-color: antiquewhite;
-    background-color: transparent;
-    color: antiquewhite;
-
-}
 
 .register {
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     background-color: #8F8BAD;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
+    width: 100%;
+    max-width: 200px;
     color: antiquewhite;
 }
 
 .login {
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
     background-color: #DDD7E9;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.2em;
+    width: 100%;
+    max-width: 200px;
     color: #1E1E1E;
 
 }
