@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import Roads from './routes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
