@@ -18,6 +18,7 @@ export const ButtonContainer = styled.div`
     
 
 export const Title = styled.h1` 
+    margin-top: 15%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -26,7 +27,6 @@ export const Title = styled.h1`
     font-family: 'Saira', sans-serif;
     font-weight: 600;
     font-size: 4em;
-    margin: 0;
     `;
 
 export const SubTitle = styled.h2`
@@ -36,7 +36,7 @@ export const SubTitle = styled.h2`
     align-items: center;
     justify-content: center;
     font-family:'Saira', sans-serif;
-    font-weight: 100;
+    font-weight: 500;
     margin-top: 0;
     margin-bottom: 2%;
     `;
@@ -52,7 +52,7 @@ export const LoginButton = styled.button`
     margin-top: 5%;
     margin-bottom: 10px;
     box-sizing: border-box;
-    background-color: #DDD7E9;
+    background-color: #fbebd4;
     border-radius: 10px;
     font-weight: 400;
     font-size: 1.2em;
@@ -61,9 +61,9 @@ export const LoginButton = styled.button`
     color: #1E1E1E;
 
     &:hover {
-        border-color: antiquewhite;
+        border-color: #fbebd4;
         background-color: transparent;
-        color: antiquewhite;
+        color: #fbebd4;
     } 
     `;
 
@@ -77,20 +77,21 @@ export const RegisterButton = styled.button`
     margin-top: 5%;
     margin-bottom: 10px;
     box-sizing: border-box;
-    background-color: #8F8BAD;
+    background-color: transparent;
     border-radius: 10px;
     font-family: 'Saira', sans-serif;
     font-weight: 400;
     font-size: 1.2em;
     width: 100%;
     max-width: 200px;
-    color: antiquewhite;
+    color: #fbebd4;
+    border-color: #fbebd4;
 
 
     &:hover {
-        border-color: antiquewhite;
-        background-color: transparent;
-        color: antiquewhite;
+        border-color: transparent;
+        background-color: #fbebd4;
+        color: #1E1E1E;
     } 
 `;
 

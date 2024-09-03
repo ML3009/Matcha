@@ -3,17 +3,17 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 
     body {
-        background-color: #2D283E;
+        background-color: #9494cc;
         font-family: 'Saira', sans-serif;
 
     }
 
     h2 {
-        color: #DDD7E9;
+        color: #cec7d4;
     }
 
     h1 {
-        color: #8F8BAD;
+        color: #fbebd4;
     }
 
 
