@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Saira', sans-serif;
 
     }
+
     h2 {
         color: #DDD7E9;
     }
@@ -15,22 +16,7 @@ const GlobalStyle = createGlobalStyle`
         color: #8F8BAD;
     }
 
-    button {
-        
-        border: 2px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        background-color: #8F8BAD;
-        color: antiquewhite;
-        font-family: 'Saira', sans-serif;  
-        width: 10em;
-    } 
 
-    button:hover {
-        border-color: antiquewhite;
-        background-color: transparent;
-        color: antiquewhite;
-    }  
 
     a {
         background-color: #8F8BAD;
