@@ -7,16 +7,23 @@ var CryptoJS = require("crypto-js");
 // put in env file
 const secretKey = "the passphrase is not secure yet";
 
-        // Decrypt
-        // var bytes  = CryptoJS.AES.decrypt(password1, secretKey);
-        // var originalText = bytes.toString(CryptoJS.enc.Utf8);
-
 const RegisterForm = () => {
     const { register, handleSubmit, formState: { errors }, getValues} = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
-        var password1 = CryptoJS.AES.encrypt(data.password, secretKey).toString();
+    const onSubmit = async (data) => {
+        data.password = CryptoJS.AES.encrypt(data.password, secretKey).toString();;
+        data.confirm_password = CryptoJS.AES.encrypt(data.confirm_password, secretKey).toString();
+        console.log("user data", data);
+        const response = await fetch('http://matcha-app-1/api/users/', 
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            }
+        );
+        console.log(response);
     };
 
     return (

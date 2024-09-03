@@ -48,14 +48,14 @@ const create_user = async (request, results) =>{
         }
     }
     
-    // var password  = CryptoJS.AES.decrypt(request.body.password, front_secretKey).toString(CryptoJS.enc.Utf8);
-    // var confirm_password = CryptoJS.AES.decrypt(request.body.confirm_password, front_secretKey).toString(CryptoJS.enc.Utf8);
+    var password  = CryptoJS.AES.decrypt(request.body.password, front_secretKey).toString(CryptoJS.enc.Utf8);
+    var confirm_password = CryptoJS.AES.decrypt(request.body.confirm_password, front_secretKey).toString(CryptoJS.enc.Utf8);
 
     const userForm = {
         username: request.body.username,
         email: request.body.email,
-        password: request.body.password, // use password instead of body password
-        confirm_password: request.body.confirm_password, // use confirm_password instead of body confirm_password
+        password: password, // use password instead of body password
+        confirm_password: confirm_password, // use confirm_password instead of body confirm_password
         first_name: request.body.first_name,
         last_name: request.body.last_name,
     }
