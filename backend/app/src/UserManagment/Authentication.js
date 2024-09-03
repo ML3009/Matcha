@@ -127,11 +127,11 @@ const connect_user = async (request, results) => {
 
 const Pool = require('pg').Pool;
 const pool = new Pool({
-    user: "matcha",
-    host: "matcha-db-1",
-    database: "matchadb",
-    password: "matchapassword",
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_CONTAINER_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 });
 
 const createUser_db = async (data) => {

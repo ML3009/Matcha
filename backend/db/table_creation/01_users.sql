@@ -1,4 +1,4 @@
-\connect matchadb matcha;
+\connect ${DB_NAME}  ${DB_USER};
 
 CREATE TABLE IF NOT EXISTS users (
     ID SERIAL PRIMARY KEY,
