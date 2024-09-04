@@ -6,7 +6,7 @@ const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     gap: 20em;
-    color: rgba(255, 255, 255, 0.7);
+    color: #9494cc;
     font-size: 12px;
 
     @media screen and (max-width: 768px) {

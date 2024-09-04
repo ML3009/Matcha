@@ -1,37 +1,29 @@
 import { createGlobalStyle } from 'styled-components';
+import BNPoolyRoundedWoff2 from '../../assets/fonts/BNPooly-Rounded.woff2';
+
 
 const GlobalStyle = createGlobalStyle`
 
+    @font-face {
+        font-family: 'BNPooly-Rounded';
+        src: url(${BNPoolyRoundedWoff2}) format('woff2');
+    }
+
     body {
-        background-color: #2D283E;
-        font-family: 'Saira', sans-serif;
+        background-color: #fbebd4;
+        font-family: 'BNPooly-Rounded', sans-serif;
 
     }
-       
+
     h2 {
-        color: #DDD7E9;
+        color: #cec7d4;
     }
 
     h1 {
-        color: #8F8BAD;
+        color: #9494cc;
     }
 
-    button {
-        
-        border: 2px solid transparent;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        background-color: #8F8BAD;
-        color: antiquewhite;
-        font-family: 'Saira', sans-serif;  
-        width: 10em;
-    } 
 
-    button:hover {
-        border-color: antiquewhite;
-        background-color: transparent;
-        color: antiquewhite;
-    }  
 
     a {
         background-color: #8F8BAD;
