@@ -42,57 +42,5 @@ export const SubTitle = styled.h2`
     `;
 
 
-export const LoginButton = styled.button`
 
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    font-family: "BNPooly-Rounded", sans-serif;
-    width: 10em;
-    height: 40px;
-    margin-top: 5%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    background-color: #9494cc;
-    border-radius: 10px;
-    font-weight: 400;
-    font-size: 1.2em;
-    width: 100%;
-    max-width: 200px;
-    color: #fbebd4;
-
-
-    &:hover {
-        border-color: #9494cc;
-        background-color: transparent;
-        color: #9494cc;
-    } 
-    `;
-
-export const RegisterButton = styled.button`
-
-
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-
-    height: 40px;
-    margin-top: 5%;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    background-color: transparent;
-    border-radius: 10px;
-    font-family: "BNPooly-Rounded", sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    width: 100%;
-    max-width: 200px;
-    color: #9494cc;
-    border-color: #9494cc;
-
-
-    &:hover {
-        border-color: transparent;
-        background-color: #9494cc;
-        color: #fbebd4;
-    } 
-`;
 

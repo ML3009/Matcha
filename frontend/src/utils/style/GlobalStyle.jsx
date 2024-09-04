@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import BNPoolyRoundedWoff2 from '../../assets/fonts/BNPooly-Rounded.woff2';
 
-
+// Saira Condensed
 const GlobalStyle = createGlobalStyle`
 
     @font-face {
@@ -48,11 +48,51 @@ const GlobalStyle = createGlobalStyle`
         padding: 1em;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    button {
+        font-family: "BNPooly-Rounded", sans-serif;
+        font-weight: 400;
+        font-size: 1.2em;
+        
+        transition: all 0.5s ease;
+        
+        height: 2.3em;
+        width: 100%;
+        max-width: 10em;
+        
+        
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        
+        border: 2px solid transparent;
+        border-radius: 10px;
 
+
+    }
+
+    .primary-button {
+        
+        background-color: #9494cc;
+        color: #fbebd4;
+
+
+        &:hover {
+            border-color: #9494cc;
+            background-color: transparent;
+            color: #9494cc;
+        } 
+    }
+
+    .secondary-button {
+        
+        background-color: transparent;
+        color: #9494cc;
+        border-color: #9494cc;
+
+        &:hover {
+            border-color: transparent;
+            background-color: #9494cc;
+            color: #fbebd4;
+        } 
     }
 
     

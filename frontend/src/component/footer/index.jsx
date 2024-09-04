@@ -2,6 +2,10 @@ import { styled } from 'styled-components';
 
 
 const FooterContainer = styled.footer`
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,11 +14,7 @@ const FooterContainer = styled.footer`
     font-size: 12px;
 
     @media screen and (max-width: 768px) {
-        position: relative;
-        font-size: 10px;
-         div {
-            margin: 0 10px;
-        }
+        font-size: 7px;
     }
 `;
 

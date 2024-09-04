@@ -1,7 +1,9 @@
+import RegisterForm from "../../component/register_form";
+
 function Register(){
     return (
         <div>
-            <h1>Register</h1>
+            <RegisterForm/>
         </div>
     )
 }

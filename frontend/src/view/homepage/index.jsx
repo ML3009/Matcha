@@ -1,13 +1,15 @@
-import {Container, ButtonContainer, Title, SubTitle, LoginButton, RegisterButton} from './style';
+import {Container, ButtonContainer, Title, SubTitle} from './style';
+import Register from '../../component/home_register/index';
+import Login from '../../component/home_login/index';
 
 function Homepage() {
 	return (
 		<Container>
 			<Title>Plant your date</Title>
-			<SubTitle>Ready to meet your flowermate ?</SubTitle>
+			<SubTitle>✿ Ready to meet your flowermate ? ✿</SubTitle>
 			<ButtonContainer>
-				<LoginButton>Login</LoginButton>
-				<RegisterButton>Register</RegisterButton>
+				<Login />
+				<Register/>
 			</ButtonContainer>
 		</Container>
 	);
