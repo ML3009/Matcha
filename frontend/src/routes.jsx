@@ -10,10 +10,14 @@ import Homepage from './view/homepage';
 import Register from './view/register';
 import Login from './view/login';
 import NotFound from './view/notfound';
+import styled from 'styled-components';
 
 import { GlobalStyle } from './utils/style/GlobalStyle';
 
-
+const MainContainer = styled.div`
+  grid-area: main;
+  min-height: 50em;
+`
 
 
 
@@ -22,7 +26,7 @@ function Roads() {
     <Router>
       <GlobalStyle />
       <Header />
-
+      <MainContainer>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/register" element={< Register/>} />
@@ -32,6 +36,7 @@ function Roads() {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </MainContainer>
 
       <Footer />
     </Router>

@@ -2,21 +2,18 @@ import { styled } from 'styled-components';
 
 
 const FooterContainer = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20em;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     color: #9494cc;
     font-size: 12px;
 
     @media screen and (max-width: 768px) {
-        position: relative;
-        font-size: 10px;
-         div {
-            margin: 0 10px;
-        }
+        font-size: 7px;
     }
 `;
+
 
 
 

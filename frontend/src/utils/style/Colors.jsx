@@ -1,15 +1,8 @@
-const colors_dark = {
-
-    // Primary
-    primary: '#fbebd4',
-    secondary: '#cec7d4',
-    background: '#9494cc',
+const colors= {
+	primary: '#9494cc',
+	secondary: '#cec7d4',
+	background: '#fbebd4',
 }
 
-const colors_light = {
+export default colors;
 
-    // Primary
-    primary: '#9494cc',
-    secondary: '#cec7d4',
-    background: '#fbebd4',
-}
