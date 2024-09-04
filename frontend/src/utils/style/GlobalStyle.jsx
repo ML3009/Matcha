@@ -45,56 +45,57 @@ const GlobalStyle = createGlobalStyle`
 		color: antiquewhite;
 	}
 
-	.primary-button {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
 
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
+    button {
         font-family: "BNPooly-Rounded", sans-serif;
-        width: 10em;
-        height: 40px;
-        margin-top: 5%;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        background-color: ${colors.primary};
-        border-radius: 10px;
         font-weight: 400;
         font-size: 1.2em;
+
+        transition: all 0.5s ease;
+
+        height: 2.3em;
         width: 100%;
-        max-width: 200px;
-        color: ${colors.background};
+        max-width: 10em;
+
+
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+
+        border: 2px solid transparent;
+        border-radius: 10px;
+
+
+    }
+
+    .primary-button {
+
+        background-color: #9494cc;
+        color: #fbebd4;
 
 
         &:hover {
-            border-color: ${colors.primary};
+            border-color: #9494cc;
             background-color: transparent;
-            color: ${colors.primary};
+            color: #9494cc;
         }
     }
 
     .secondary-button {
 
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-
-        height: 40px;
-        margin-top: 5%;
-        margin-bottom: 10px;
-        box-sizing: border-box;
         background-color: transparent;
-        border-radius: 10px;
-        font-family: "BNPooly-Rounded", sans-serif;
-        font-weight: 400;
-        font-size: 1.2em;
-        width: 100%;
-        max-width: 200px;
-        color: ${colors.primary};
-        border-color: ${colors.primary};
-
+        color: #9494cc;
+        border-color: #9494cc;
 
         &:hover {
             border-color: transparent;
-            background-color: ${colors.primary};
-            color: ${colors.background};
+            background-color: #9494cc;
+            color: #fbebd4;
         }
     }
 
