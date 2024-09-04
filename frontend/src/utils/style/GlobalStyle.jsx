@@ -1,10 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
+import BNPoolyRoundedWoff2 from '../../assets/fonts/BNPooly-Rounded.woff2';
+
 
 const GlobalStyle = createGlobalStyle`
 
+    @font-face {
+        font-family: 'BNPooly-Rounded';
+        src: url(${BNPoolyRoundedWoff2}) format('woff2');
+    }
+
     body {
-        background-color: #9494cc;
-        font-family: 'Saira', sans-serif;
+        background-color: #fbebd4;
+        font-family: 'BNPooly-Rounded', sans-serif;
 
     }
 
@@ -13,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-        color: #fbebd4;
+        color: #9494cc;
     }
 
 
