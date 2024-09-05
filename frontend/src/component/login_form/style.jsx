@@ -27,3 +27,10 @@ export const LoginFormContainer = styled.form`
     padding: 20px;
     box-sizing: border-box;
 `;
+
+export const Error = styled.p`
+    color:red;
+    display: flex;
+    justify-content: center;
+    
+`;

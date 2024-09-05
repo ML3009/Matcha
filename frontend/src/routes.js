@@ -10,6 +10,7 @@ import Homepage from './view/homepage';
 import Register from './view/register';
 import Login from './view/login';
 import NotFound from './view/notfound';
+import Informations from './view/informations';
 
 import { GlobalStyle } from './utils/style/GlobalStyle';
 
@@ -30,6 +31,7 @@ function Roads() {
         <Route path="/wilderness" element={<Wilderness />} />
         <Route path="/mygarden" element={<MyGarden />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/informations" element={<Informations />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
