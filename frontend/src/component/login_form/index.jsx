@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { ErrorMessage } from "@hookform/error-message"
 
 import InputField from '../input_field'
-import { LoginFormWrapper, LoginFormContainer } from "./style"
+import { LoginFormWrapper, LoginFormContainer, Error } from "./style"
 import RegisterSubmitButton from '../submit_button'
 
 
@@ -27,6 +27,7 @@ function LoginForm() {
         <LoginFormWrapper>
             <h1>Login</h1>
             <LoginFormContainer onSubmit={handleSubmit(onSubmit)}>
+                {errors.username && <Error>ⓘ This field is required</Error>}
                 <InputField 
                             label="Username"
                             type="text"
@@ -37,7 +38,7 @@ function LoginForm() {
                                 required: "Username field is required.",
                             }}
                         />
-
+                {errors.password && <Error>ⓘ This field is required</Error>}
                 <InputField 
                             label="Password"
                             type="password"
@@ -50,17 +51,10 @@ function LoginForm() {
                         />
                 <RegisterSubmitButton />
             </LoginFormContainer>
-            {Object.keys(errors).length > 0 && (
-            <div className={`error-messages ${Object.keys(errors).length > 0 ? 'has-errors' : ''}`}>
-                {(Object.keys(errors).length > 0) && <h3>Errors:</h3>}
-                {Object.keys(errors).map((field) => (
-                    <ErrorMessage key={field} errors={errors} name={field} render={({ message }) => 
-                        <p>ⓘ {message}
-                    </p>} />
-                ))}
-            </div>)}
         </LoginFormWrapper>
     );
 }
 
 export default LoginForm;
+
+//test
