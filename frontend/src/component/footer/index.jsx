@@ -2,14 +2,10 @@ import { styled } from 'styled-components';
 
 
 const FooterContainer = styled.footer`
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20em;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     color: #9494cc;
     font-size: 12px;
 
@@ -17,6 +13,7 @@ const FooterContainer = styled.footer`
         font-size: 7px;
     }
 `;
+
 
 
 
