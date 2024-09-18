@@ -9,7 +9,7 @@ const DislikeButton = styled.button`
 `;
 
 const DislikeImg = styled.img`
-    width: 80%;
+    width: 70%;
     display: block;
     margin: auto;
 `;

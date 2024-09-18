@@ -9,7 +9,7 @@ const LikeButton = styled.button`
 `;
 
 const LikeImg = styled.img `
-    width: 80%;
+    width: 70%;
     margin: auto;
     display: block;
 

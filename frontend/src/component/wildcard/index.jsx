@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Picture from '../../assets/satxie.jpg';
+import colors from '../../utils/style/Colors';
 
 
 const CardContainer = styled.div`
@@ -9,13 +10,11 @@ const CardContainer = styled.div`
 	place-self: center;
 	gap: 0.6em;
 	width: 90%;
-	max-width: 20em;
+	max-width: 24em;
 	padding: 0 1em;
 	margin: 3em auto;
-	background-color: #8F8BAD;
-	box-shadow: 0em 1em 1em #999;
+	background-color: ${colors.primary};
 	border-radius: 10px;
-	border: solid;
 
 `;
 
@@ -23,20 +22,14 @@ const ProfilePicture = styled.img`
 	width: 90%;
 	margin: auto;
 	border-radius: 1em;
-	border: solid;
-	filter: grayscale(0);
-	&:hover {
-		filter: grayscale(1);
-	}
 `;
 
 const AgeName = styled.div`
-	background-color: #DDD7E9;
+	background-color: ${colors.background};
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 1em;
-	border: solid;
 	display: flex;
 	align-items: center;
 	margin: 1em auto;
@@ -44,29 +37,28 @@ const AgeName = styled.div`
 
 const HumorContainer = styled.div`
 	margin-left: 1em;
-	margin-right: 6em;
+	margin-right: 8em;
 `;
 
 const NameContainer = styled.div`
 `;
 
 const AgeContainer = styled.div`
-	margin-left: 5em;
+	margin-left: 9em;
 `;
 
 const DescriptionContainer = styled.div`
-	background-color: #DDD7E9;
+	background-color: ${colors.background};
 	text-align: center;
 	width: 100%;
 	padding: 0.4em 0.8em;
 	box-sizing: border-box;
 	border-radius: 1em;
-	border: solid;
 	margin: 0.4em auto;
 `;
 
 const TagContainer = styled.div`
-	color: #DDD7E9;
+	color: ${colors.background};
 	text-align: center;
 	box-sizing: border-box;
 	margin: 1em auto;

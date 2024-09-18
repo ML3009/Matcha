@@ -20,24 +20,22 @@ const MainContainer = styled.div`
   min-height: 50em;
 `
 
-
-
 function Roads() {
   return (
     <Router>
       <GlobalStyle />
       <Header />
       <MainContainer>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/register" element={< Register/>} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/wilderness" element={<Wilderness />} />
-        <Route path="/mygarden" element={<MyGarden />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/informations" element={<Informations />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/register" element={< Register/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/wilderness" element={<Wilderness />} />
+          <Route path="/mygarden" element={<MyGarden />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/informations" element={<Informations />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </MainContainer>
 
       <Footer />

@@ -19,9 +19,6 @@ const UserRouter = require('./UserManagment/urls');
 app.use('/api/users', UserRouter )
 
 
-
-
-
 app.get('/', (request, response) => {
     response.json({info: 'Node.js, Express, and Postgres API'})
 });

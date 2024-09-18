@@ -22,7 +22,7 @@ const NavBar = styled.nav`
 `;
 
 const RingBellNotif = styled.img `
-	height: 2em;
+	height: 7%;
 	cursor: pointer;
 	display: block;
 	position: absolute;
@@ -51,20 +51,18 @@ const RingBellNotif = styled.img `
 
 const NavBarList = styled.ul`
 	list-style: none;
-	padding: 0;
-	margin: 0;
 	display: none;
 	grid-column: 2;
 	grid-row: 1;
-	grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
-	justify-content: space-around;
+	grid-template-columns: repeat(auto-fill, minmax(13em, auto));
+	justify-content: space-between;
 	align-items: center;
 
 	&.show {
 		display: grid;
-		}
+	}
 
-	 @media screen and (max-width: 768px) {
+	@media screen and (max-width: 768px) {
 		grid-column: 1;
 		grid-row: 2;
 		grid-template-columns: 1fr;
@@ -77,23 +75,19 @@ const NavBarList = styled.ul`
 		align-items: center;
 
 		&.show {
-		display: grid;
-		justify-content: center;
-		align-items: center;
+			display: grid;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
 `;
 
 const NavBarItem = styled.li`
-	padding: 1rem;
+	padding: 1em auto;
 	place-self: center;
 	width: 12em;
 	text-align: center;
-	&:hover {
-		display: grid;
-		place-self: center;
-		}
 	@media screen and (max-width: 768px) {
 		place-self: center;
 
@@ -101,8 +95,11 @@ const NavBarItem = styled.li`
 `;
 
 const ColorLinks = styled(Link)`
-	font-size: 15px;
+	font-size: 1.2em;
 	padding: 0.2em 2em;
+	margin-top: 1.5em;
+    margin-bottom: 1.5em;
+	
 	 @media screen and (max-width: 768px) {
 		 display: block;
 	}
@@ -142,7 +139,7 @@ function Header() {
 				</NavBarItem>
 
 				<NavBarItem>
-					<button className="">Logout</button>
+					<button className="primary-button">Logout</button>
 				</NavBarItem>
 			</NavBarList>
 			{!disableMenu && <RingBellNotif src={RingBell} />}

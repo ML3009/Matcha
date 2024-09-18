@@ -9,8 +9,6 @@ const BiographyLink= styled(Link) `
     align-self: start;
     padding: 0.8em 6em;
     border-radius: 1em;
-    border: solid;
-    border-color: black;
     display: flex; 
     align-items: center;
 `;

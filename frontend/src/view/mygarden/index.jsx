@@ -7,6 +7,7 @@ const MyGardenWrapper = styled.div `
     place-items: center;
     grid-template-rows: auto auto auto auto ;
     grid-template-columns: auto auto auto;
+    padding: 4em;
 
     @media screen and (max-width: 1024px) {
         grid-template-columns: 1fr;

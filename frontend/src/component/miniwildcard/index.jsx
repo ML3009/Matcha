@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import Picture from '../../assets/satxie.jpg';
+import colors from '../../utils/style/Colors';
 
 const MiniCardGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
-    width: 100%;
+    width: 60%;
     padding: 1em;
+    justify-self: center;
     box-sizing: border-box;
 
     @media screen and (max-width: 1024px) {
@@ -26,7 +28,7 @@ const MiniCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #8F8BAD;
+    background-color: ${colors.primary};
     box-shadow: 0em 1em 1em #999;
     border-radius: 10px;
     border: solid;
@@ -42,11 +44,11 @@ const MiniCardPicture = styled.img`
 
 const MiniCardTitle = styled.h3`
     margin: 0.5em 0;
-    color: #DDD7E9;
+    color: ${colors.background};
 `;
 
 const MiniCardDescription = styled.p`
-    color: #DDD7E9;
+    color: ${colors.background};
 `;
 
 function MiniCards() {

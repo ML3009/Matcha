@@ -4,6 +4,7 @@ import  colors from './Colors';
 
 const GlobalStyle = createGlobalStyle`
 
+
 	@font-face {
 		font-family: 'BNPooly-Rounded';
 		src: url(${BNPoolyRoundedWoff2}) format('woff2');
@@ -21,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 							"footer";
 	}
 
+
 	h1 {
 		color: ${colors.primary};
 	}
@@ -31,19 +33,25 @@ const GlobalStyle = createGlobalStyle`
 
 
 	a {
-		background-color: #8F8BAD;
+		background-color: ${colors.primary};
 		border-radius: 5px;
-		transition: all 0.3s ease;
 		color: antiquewhite;
 		text-decoration: none;
 		width: 10em;
+        transition: all 0.5s ease;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        font-size: 1.2em;
 	}
-	a:hover,
-	a:focus {
-		background-color: transparent;
-		border-color: antiquewhite;
-		color: antiquewhite;
-	}
+    
+    a:hover,
+    a:focus {     
+        border-color: ${colors.primary};
+        background-color: transparent;
+        color: ${colors.primary};
+    }
+
+
 
     header {
         display: flex;
@@ -54,12 +62,11 @@ const GlobalStyle = createGlobalStyle`
 
     button {
         font-family: "BNPooly-Rounded", sans-serif;
-        font-weight: 400;
         font-size: 1.2em;
 
         transition: all 0.5s ease;
 
-        height: 2.3em;
+        height: 35px;
         width: 100%;
         max-width: 10em;
 
@@ -70,37 +77,36 @@ const GlobalStyle = createGlobalStyle`
         border: 2px solid transparent;
         border-radius: 10px;
 
+        cursor: pointer;
+
 
     }
 
     .primary-button {
 
-        background-color: #9494cc;
-        color: #fbebd4;
+        background-color: ${colors.primary};
+        color: ${colors.background};
 
 
         &:hover {
-            border-color: #9494cc;
             background-color: transparent;
-            color: #9494cc;
+            border-color: ${colors.primary};
+            color: ${colors.primary};
         }
     }
 
     .secondary-button {
 
         background-color: transparent;
-        color: #9494cc;
-        border-color: #9494cc;
+        color: ${colors.primary};
+        border-color: ${colors.primary};
 
         &:hover {
             border-color: transparent;
-            background-color: #9494cc;
-            color: #fbebd4;
+            background-color: ${colors.primary};
+            color: ${colors.background};
         }
     }
-
-
-
 `;
 
 export { GlobalStyle };
