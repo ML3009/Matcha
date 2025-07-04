@@ -1,23 +1,26 @@
 # Utiliser une image de base Node.js
-FROM node:16
+FROM node:lts-alpine
 
 # Définir le répertoire de travail dans le conteneur
+RUN mkdir /app
 WORKDIR /app
 
 # Copier les fichiers package.json et package-lock.json
-COPY package.json ./
+COPY package.json package.json
 
 # Installer les dépendances
-RUN npm install
+RUN npm i
+RUN apk --update --no-cache add curl
 
-COPY . .
+COPY src src
+COPY public public
 
-RUN npm install
+COPY vite.config.js vite.config.js
+COPY index.html index.html
+
 # Construire l'application React
 RUN npm run build
 
-# Exposer le port sur lequel l'application va tourner
-EXPOSE 4000
 
 # Démarrer le serveur Node.js
-CMD ["node", "src/server.js"]
+CMD npm run dev
